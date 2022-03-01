@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="affordable and professional web design">
+    <meta name="viewport" content="web design, affordable web design, professional web page">
+    <meta name="author" content="Brad Traversy">
+    <!--<link rel="stylesheet" href="./css/style.css">-->
+    <style>
+        /*
+#e8491d is plum
+#e8491a is #0603af
+
+*/
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: lightgray;
+}
+
+/*Global*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.button_1{
+    height: 38px;
+    background-color: #7c2ea3;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.dark{
+    padding: 15px;
+    background: #7c2ea3;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+/*Header*/
+header{
+    background: #d6b4e7;
+    color: rgb(0, 0, 0);
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #c18eda 3px solid;
+}
+
+header a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current{
+    color: #7c2ea3;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #7c2ea3;
+    font-weight: bold;
+}
+
+
+/*showcase*/
+#showcase{
+    color: rgb(255, 255, 255);
+    min-height: 400px;
+    background: url('https://static0.reviewthisimages.com/wordpress/wp-content/uploads/2020/02/reusable-water-bottle.jpg') no-repeat 0 -400px;
+    text-align: center;
+    filter: brightness(80%);
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/*newsletter*/
+#newsletter{
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #d6b4e7;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type = "email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/*boxes*/
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px; 
+}
+
+#boxes .box img{
+    width: 90px;
+}
+
+/*sidebar*/
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+/*main-col*/
+article#main-col{
+    float: left;
+    width: 65%;
+}
+
+/*services*/
+ul#services li{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+
+/*footer*/
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    background-color: #d6b4e7;
+    text-align: center;
+}
+
+/*media queries*/
+@media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    #newsletter button, .quote button{
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"], .quote input, .quote textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/*For Product Page*/
+#product:hover{
+    color: white;
+    animation-name: pro;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.head{
+    margin: 0%;
+    animation-name: header;
+    text-align: center;
+}
+
+
+/*Animations*/
+@keyframes pro {
+    0%   {background-color: #d6b4e7;}
+    25%  {background-color: #c18eda;}
+    50%  {background-color: #c18eda;}
+    100% {background-color: #d6b4e7;}
+}
+@keyframes header {
+    
+}
+    </style>
+    <title>Acme | Services</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Bottles</span> Up</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1 class="head">Products</h1>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box" id="product">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0304f02864957.5601494c87cb7.jpg" alt="Quality">
+                <h3>Bottle Siz L</h3>
+                <p>500 ml capacity can hold warm/cold water for 12hrs</p>
+                <p>Price: $8.00 per Bottle</p>
+            </div>
+            <div class="box" id="product">
+                <img src="https://des.gbtcdn.com/uploads/pdm-desc-pic/Electronic/image/2018/02/22/15192649239594.jpg" alt="Smooth and Sleek">
+                <h3>Bottle Siz XL</h3>
+                <p>1l capacity can hold warm/cold water for 12hrs</p>
+                <p>Price: $12.00 per Bottle</p>
+            </div>
+            <div class="box" id="product">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0304f02864957.5601494c87cb7.jpg" alt="Bottles Up">
+                <h3>Bottle Siz L(premium)</h3>
+                <p>500 ml capacity can hold warm/cold water for 12hrs</p>
+                <p>Price: $10.00 per Bottle</p>
+            </div>
+            <div class="box" id="product">
+                <img src="https://des.gbtcdn.com/uploads/pdm-desc-pic/Electronic/image/2018/02/22/15192649239594.jpg" alt="Bottles Up">
+                <h3>Bottle Siz XL(premium)</h3>
+                <p>1l capacity can hold warm/cold water for 24hrs</p>
+                <p>Price: $14.00 per Bottle</p>
+            </div>
+            <div class="box" id="product">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0304f02864957.5601494c87cb7.jpg" alt="Bottles Up">
+                <h3>Bottle Siz XXL</h3>
+                <p>500 ml capacity can hold warm/cold water for 24hrs</p>
+                <p>Price: $14.00 per Bottle</p>
+            </div>
+            <div class="box" id="product">
+                <img src="https://des.gbtcdn.com/uploads/pdm-desc-pic/Electronic/image/2018/02/22/15192649239594.jpg" alt="Bottles Up">
+                <h3>Bottle Siz XXL</h3>
+                <p>1l capacity can hold warm/cold water for 24hrs</p>
+                <p>Price: $16.00 per Bottle</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe To Get Exciting Offers That You Never Want To Miss Out</h1>
+            <form action="">
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Bottles Up, Copyright &copy; 2022</p>
+    </footer>
+</body>
+</html>
